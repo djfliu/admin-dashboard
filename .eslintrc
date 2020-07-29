@@ -32,6 +32,7 @@
       2,
       2
     ],
+    "react/jsx-filename-extension": 1,
     "react/jsx-max-props-per-line": 1,
     "react/jsx-no-duplicate-props": 1,
     "react/jsx-no-literals": 0,
@@ -51,18 +52,20 @@
     "react/react-in-jsx-scope": 1,
     "react/self-closing-comp": 1,
     "react/sort-comp": 0,
+    "react/jsx-props-no-spreading": 1,
     "semi": 0
   },
   "env": {
     "es6": true,
     "browser": true
   },
-  "extends": "eslint:recommended",
+  "extends": [ "airbnb", "plugin:prettier/recommended" ],
   "ecmaFeatures": {
     "jsx": true,
     "experimentalObjectRestSpread": true
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ]
 }

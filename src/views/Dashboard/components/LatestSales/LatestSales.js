@@ -33,17 +33,13 @@ const LatestSales = props => {
   const classes = useStyles();
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <CardHeader
         action={
-          <Button
-            size="small"
-            variant="text"
-          >
-            Last 7 days <ArrowDropDownIcon />
+          <Button size="small" variant="text">
+            Last 7 days 
+{' '}
+<ArrowDropDownIcon />
           </Button>
         }
         title="Latest Sales"
@@ -51,19 +47,12 @@ const LatestSales = props => {
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
-          <Bar
-            data={data}
-            options={options}
-          />
+          <Bar data={data} options={options} />
         </div>
       </CardContent>
       <Divider />
       <CardActions className={classes.actions}>
-        <Button
-          color="primary"
-          size="small"
-          variant="text"
-        >
+        <Button color="primary" size="small" variant="text">
           Overview <ArrowRightIcon />
         </Button>
       </CardActions>

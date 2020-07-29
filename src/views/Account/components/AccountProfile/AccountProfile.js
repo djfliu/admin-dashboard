@@ -48,17 +48,11 @@ const AccountProfile = props => {
   };
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <CardContent>
         <div className={classes.details}>
           <div>
-            <Typography
-              gutterBottom
-              variant="h2"
-            >
+            <Typography gutterBottom variant="h2">
               John Doe
             </Typography>
             <Typography
@@ -66,7 +60,7 @@ const AccountProfile = props => {
               color="textSecondary"
               variant="body1"
             >
-              {user.city}, {user.country}
+              {user.city},{user.country}
             </Typography>
             <Typography
               className={classes.dateText}
@@ -76,26 +70,16 @@ const AccountProfile = props => {
               {moment().format('hh:mm A')} ({user.timezone})
             </Typography>
           </div>
-          <Avatar
-            className={classes.avatar}
-            src={user.avatar}
-          />
+          <Avatar className={classes.avatar} src={user.avatar} />
         </div>
         <div className={classes.progress}>
           <Typography variant="body1">Profile Completeness: 70%</Typography>
-          <LinearProgress
-            value={70}
-            variant="determinate"
-          />
+          <LinearProgress value={70} variant="determinate" />
         </div>
       </CardContent>
       <Divider />
       <CardActions>
-        <Button
-          className={classes.uploadButton}
-          color="primary"
-          variant="text"
-        >
+        <Button className={classes.uploadButton} color="primary" variant="text">
           Upload picture
         </Button>
         <Button variant="text">Remove picture</Button>

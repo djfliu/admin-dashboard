@@ -3,62 +3,52 @@ import uuid from 'uuid/v1';
 export default [
   {
     id: uuid(),
-    ref: 'CDD1049',
+    ref: 'Entsoc event 1',
     amount: 30.5,
     customer: {
-      name: 'Ekaterina Tankova'
+      name: 'EntSoc'
     },
     createdAt: 1555016400000,
-    status: 'pending'
+    status: 'google.ca'
   },
   {
     id: uuid(),
-    ref: 'CDD1048',
+    ref: 'Conrad event ',
     amount: 25.1,
     customer: {
-      name: 'Cao Yu'
+      name: 'Conrad'
     },
     createdAt: 1555016400000,
-    status: 'delivered'
+    status: 'google.ca'
   },
   {
     id: uuid(),
-    ref: 'CDD1047',
+    ref: 'Shopify Event',
     amount: 10.99,
     customer: {
-      name: 'Alexa Richardson'
+      name: 'Shopify'
     },
     createdAt: 1554930000000,
-    status: 'refunded'
+    status: 'google.ca'
   },
   {
     id: uuid(),
-    ref: 'CDD1046',
+    ref: 'Velocity Event',
     amount: 96.43,
     customer: {
-      name: 'Anje Keizer'
+      name: 'Velocity'
     },
     createdAt: 1554757200000,
-    status: 'pending'
+    status: 'google.ca'
   },
   {
     id: uuid(),
-    ref: 'CDD1045',
+    ref: 'FEDs event',
     amount: 32.54,
     customer: {
-      name: 'Clarke Gillebert'
+      name: 'UWaterloo'
     },
     createdAt: 1554670800000,
-    status: 'delivered'
-  },
-  {
-    id: uuid(),
-    ref: 'CDD1044',
-    amount: 16.76,
-    customer: {
-      name: 'Adam Denisov'
-    },
-    createdAt: 1554670800000,
-    status: 'delivered'
+    status: 'uwaterloo.ca'
   }
 ];

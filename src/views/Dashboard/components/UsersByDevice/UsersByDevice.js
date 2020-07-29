@@ -105,10 +105,7 @@ const UsersByDevice = props => {
   ];
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <CardHeader
         action={
           <IconButton size="small">
@@ -120,23 +117,14 @@ const UsersByDevice = props => {
       <Divider />
       <CardContent>
         <div className={classes.chartContainer}>
-          <Doughnut
-            data={data}
-            options={options}
-          />
+          <Doughnut data={data} options={options} />
         </div>
         <div className={classes.stats}>
           {devices.map(device => (
-            <div
-              className={classes.device}
-              key={device.title}
-            >
+            <div key={device.title} className={classes.device}>
               <span className={classes.deviceIcon}>{device.icon}</span>
               <Typography variant="body1">{device.title}</Typography>
-              <Typography
-                style={{ color: device.color }}
-                variant="h2"
-              >
+              <Typography style={{ color: device.color }} variant="h2">
                 {device.value}%
               </Typography>
             </div>

@@ -21,8 +21,8 @@ import {
 } from '@material-ui/core';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
-import mockData from './data';
 import { StatusBullet } from 'components';
+import mockData from './data';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -50,7 +50,7 @@ const statusColors = {
   refunded: 'danger'
 };
 
-const LatestOrders = props => {
+const LatestEvents = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -58,21 +58,14 @@ const LatestOrders = props => {
   const [orders] = useState(mockData);
 
   return (
-    <Card
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <Card {...rest} className={clsx(classes.root, className)}>
       <CardHeader
         action={
-          <Button
-            color="primary"
-            size="small"
-            variant="outlined"
-          >
+          <Button color="primary" size="small" variant="outlined">
             New entry
           </Button>
         }
-        title="Latest Orders"
+        title="Latest Events"
       />
       <Divider />
       <CardContent className={classes.content}>
@@ -81,30 +74,21 @@ const LatestOrders = props => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Order Ref</TableCell>
-                  <TableCell>Customer</TableCell>
+                  <TableCell>Title</TableCell>
+                  <TableCell>Host</TableCell>
                   <TableCell sortDirection="desc">
-                    <Tooltip
-                      enterDelay={300}
-                      title="Sort"
-                    >
-                      <TableSortLabel
-                        active
-                        direction="desc"
-                      >
+                    <Tooltip enterDelay={300} title="Sort">
+                      <TableSortLabel active direction="desc">
                         Date
                       </TableSortLabel>
                     </Tooltip>
                   </TableCell>
-                  <TableCell>Status</TableCell>
+                  <TableCell>URL</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {orders.map(order => (
-                  <TableRow
-                    hover
-                    key={order.id}
-                  >
+                  <TableRow key={order.id} hover>
                     <TableCell>{order.ref}</TableCell>
                     <TableCell>{order.customer.name}</TableCell>
                     <TableCell>
@@ -112,11 +96,11 @@ const LatestOrders = props => {
                     </TableCell>
                     <TableCell>
                       <div className={classes.statusContainer}>
-                        <StatusBullet
-                          className={classes.status}
-                          color={statusColors[order.status]}
-                          size="sm"
-                        />
+                        {/* <StatusBullet */}
+                        {/*  className={classes.status} */}
+                        {/*  color={statusColors[order.status]} */}
+                        {/*  size="sm" */}
+                        {/* /> */}
                         {order.status}
                       </div>
                     </TableCell>
@@ -129,11 +113,7 @@ const LatestOrders = props => {
       </CardContent>
       <Divider />
       <CardActions className={classes.actions}>
-        <Button
-          color="primary"
-          size="small"
-          variant="text"
-        >
+        <Button color="primary" size="small" variant="text">
           View all <ArrowRightIcon />
         </Button>
       </CardActions>
@@ -141,8 +121,8 @@ const LatestOrders = props => {
   );
 };
 
-LatestOrders.propTypes = {
+LatestEvents.propTypes = {
   className: PropTypes.string
 };
 
-export default LatestOrders;
+export default LatestEvents;
